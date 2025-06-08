@@ -3,7 +3,8 @@ from tkinter import messagebox
 import requests
 
 # ✅ 修改為妳伺服器的區網 IP 和 port
-SERVER_URL = "http://127.0.0.1:5000/minimize"
+SERVER_URL = "https://patrick-osj5.onrender.com/minimize"
+
 
 
 
