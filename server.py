@@ -1,9 +1,7 @@
-# server.py
 from flask import Flask, request, jsonify
 from patrick_method import patrick_minimize, multi_output_minimize
 
 app = Flask(__name__)
-
 
 @app.route('/minimize', methods=['POST'])
 def minimize():
@@ -19,9 +17,6 @@ def minimize():
 
     return jsonify(result)
 
-app.run(host='0.0.0.0', port=5000, debug=True)
-
-
+# 專門給 Gunicorn 用的啟動
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
-
