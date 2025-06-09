@@ -1,6 +1,6 @@
 # main.py
 # ✅ 啟動主控腳本：同時執行 Flask 後端與 Streamlit 前端
-# By: 瑄庭
+# By: 庭瑄
 
 import subprocess
 import threading

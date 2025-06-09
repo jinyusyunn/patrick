@@ -1,6 +1,6 @@
 # utils.py
 # 實用工具函式，用於轉換格式與驗證輸入
-# By: 瑄庭
+# By: 庭瑄
 
 def truth_table_to_minterms(table):
     """

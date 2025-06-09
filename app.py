@@ -1,6 +1,6 @@
 # app.py
 # Streamlit 前端應用程式：輸入 PI 和 minterms，呼叫後端最小化
-# By: 瑄庭
+# By: 庭瑄
 
 import streamlit as st
 import requests
@@ -58,8 +58,10 @@ if st.button("🚀 開始最小化"):
             if response.status_code == 200:
                 result = response.json()
                 st.success("✅ 最小化結果如下：")
-                for output, terms in result.items():
-                    st.code(f"{output} = {' + '.join(terms)}", language="text")
+                for output, detail in result.items():
+                    final_terms = detail.get("Final", [])
+                    st.code(f"{output} = {' + '.join(final_terms)}", language="text")
+
             else:
                 # 回應失敗，顯示錯誤訊息
                 st.error(f"❌ 錯誤：{response.json().get('error', '未知錯誤')}")
